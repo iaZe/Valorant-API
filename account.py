@@ -5,7 +5,7 @@ tagLine = 'BARA'
 
 def get_valorant_data():
     url = f'https://americas.api.riotgames.com/riot/account/v1/accounts/by-riot-id/{gameName}/{tagLine}'
-    headers = {'X-Riot-Token': 'RGAPI-6a11824f-f9cf-46a4-9646-f5dc7eea2e9b'}
+    headers = {'X-Riot-Token': 'token'}
     response = requests.get(url, headers=headers)
     return response.json()
 print(get_valorant_data())
@@ -17,7 +17,7 @@ print(get_puuid())
 
 def get_valorant_match():
     url = f'https://br.api.riotgames.com/val/match/v1/matchlists/by-puuid/{get_puuid}'
-    headers = {'X-Riot-Token': 'RGAPI-6a11824f-f9cf-46a4-9646-f5dc7eea2e9b'}
+    headers = {'X-Riot-Token': 'token'}
     response = requests.get(url, headers=headers)
     return response.json()
 print(get_valorant_match())

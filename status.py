@@ -2,7 +2,7 @@ import requests
 
 def get_valorant_data():
     url = 'https://br.api.riotgames.com/val/status/v1/platform-data'
-    headers = {'X-Riot-Token': 'RGAPI-6a11824f-f9cf-46a4-9646-f5dc7eea2e9b'}
+    headers = {'X-Riot-Token': 'token'}
     response = requests.get(url, headers=headers)
     return response.json()
 
